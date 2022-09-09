@@ -1,27 +1,27 @@
- import * as React from 'react';
- import GoogleMap from './googleMap';
- import Card from '@mui/material/Card';
+import * as React from 'react';
+import GoogleMap from './googleMap';
+import Card from '@mui/material/Card';
 
 interface Props {
-    coordinates:any;
+    coordinates: any;
 }
- 
+
 interface State {
-    
+
 }
- 
+
 class Map extends React.Component<Props, State> {
     state = {
         zoom: 12,
-        lat: this.props.coordinates?.latitude,
-        lng: this.props.coordinates?.longitude
+        lat: this.props.coordinates?.Latitude,
+        lng: this.props.coordinates?.Longitude
     }
 
     showGoogleMap = () => {
-        return this.props.coordinates?.latitude && this.props.coordinates?.longitude;
+        return this.props.coordinates?.Latitude && this.props.coordinates?.Longitude;
     }
 
-    render() { 
+    render() {
         return (
             <>
                 {!this.showGoogleMap() && <Card className="App-no-map">Oops! We couldn't find that on the map.</Card>}
@@ -30,5 +30,5 @@ class Map extends React.Component<Props, State> {
         );
     }
 }
- 
+
 export default Map;

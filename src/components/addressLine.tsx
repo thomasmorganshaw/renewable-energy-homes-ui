@@ -14,7 +14,7 @@ class AddressLine extends React.Component<Props, State> {
         let arr = []
         if (props.propertyResult === null) return state;
         if (props.propertyResult?.houseName?.length > 0) arr.push(props.propertyResult.houseName)
-        if (props.propertyResult?.houseNumber?.length > 0) arr.push(props.propertyResult.houseNumber)
+        if (props.propertyResult?.houseNumber > 0) arr.push(props.propertyResult.houseNumber)
         if (props.propertyResult?.addressLine1?.length > 0) arr.push(props.propertyResult.addressLine1)
         if (props.propertyResult?.addressLine2?.length > 0) arr.push(props.propertyResult.addressLine2)
         if (props.propertyResult?.addressLine3?.length > 0) arr.push(props.propertyResult.addressLine3)

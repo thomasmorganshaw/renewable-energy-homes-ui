@@ -29,13 +29,13 @@ class PropertyInfo extends React.Component<Props, State> {
   state = {}
 
   formatDate = (value) => {
-    if (value === null) return "-";
+    if (value === null || value === undefined) return "-";
     let date = Moment(value)
     return date.format("MMM YYYY");
   }
 
   formatCurrency = (value) => {
-    if (value === null) return "-";
+    if (value === null || value === undefined) return "-";
     return value.toLocaleString('en-UK', {
       style: 'currency',
       currency: 'GBP',
@@ -56,7 +56,7 @@ class PropertyInfo extends React.Component<Props, State> {
                 <Stack spacing={1}>
                   <label>Last Sold</label>
                   <label><strong>{
-                    this.formatDate(this.props.propertyResult.dateOfSale)
+                    this.formatDate(this.props.propertyResult.latestPropertySale[0]?.dateOfSale)
                   }</strong></label>
                 </Stack>
               </Box>
@@ -66,7 +66,7 @@ class PropertyInfo extends React.Component<Props, State> {
                 <Stack spacing={1}>
                   <label>Sale Amount</label>
                   <label><strong>{
-                    this.formatCurrency(this.props.propertyResult.saleAmount)
+                    this.formatCurrency(this.props.propertyResult.latestPropertySale[0]?.saleAmount)
                   }</strong></label>
                 </Stack>
               </Box>
@@ -82,7 +82,7 @@ class PropertyInfo extends React.Component<Props, State> {
           </Grid>
           <Grid container>
             <Grid item xs={12} md={6}>
-              {this.props.propertyResult.propertyFeatures.map(feature =>
+              {this.props.propertyResult.propertyFeatures?.map(feature =>
                 <PropertyFeature key={feature.propertyFeatureId} feature={feature} />
               )}
             </Grid>

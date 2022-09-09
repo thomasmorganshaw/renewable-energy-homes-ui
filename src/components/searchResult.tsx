@@ -28,7 +28,7 @@ class SearchResult extends React.Component<Props, State> {
                 {this.hasResults() &&
                     <Stack spacing={2}>
                         {results.map(result =>
-                            <PropertyInfo key={result.id} propertyResult={result} />
+                            <PropertyInfo key={result._id} propertyResult={result} />
                         )}
                     </Stack>
                 }

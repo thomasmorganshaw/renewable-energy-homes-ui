@@ -17,14 +17,14 @@ app.use(express.static("public"));
 
 //Serve static resources
 app.use(express.static("static"));
-app.get("/", (req, res) => {
-    var staticPath = path.join(__dirname, "static", "index.html")
-    console.log(staticPath)
+app.get("/data", (req, res) => {
+    var staticPath = path.join(__dirname, "static", "data.json")
+    console.log("staticPath", staticPath)
     res.sendFile(staticPath);
 });
 
 // Proxy setup
-app.use('/api/property', createProxyMiddleware({
+app.use('/property', createProxyMiddleware({
     target: process.env.API_SEARCH_URL,
     changeOrigin: true
 }));

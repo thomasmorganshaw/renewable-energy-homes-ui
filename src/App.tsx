@@ -55,7 +55,8 @@ class App extends React.Component<Props, State> {
   state = {
     isSearching: false,
     searchResults: null,
-    postcodeCoordinates: null
+    postcodeCoordinates: null,
+    hasResult: false
   }
 
   handleSearch = async (postcode: String) => {
@@ -63,10 +64,11 @@ class App extends React.Component<Props, State> {
     this.resetState();
 
     this.setState({
-      isSearching: true
+      isSearching: true,
+      hasResult: false
     })
 
-    var url = `${process.env.REACT_APP_API_BASE_URL}/api/property/search/${postcode}`
+    var url = `${process.env.REACT_APP_API_BASE_URL}/property/search/${postcode}`
     var response: any = await Axios
       .get(url)
       .catch(() => this.handleError)
@@ -76,7 +78,8 @@ class App extends React.Component<Props, State> {
     this.setState({
       postcodeCoordinates: response.data.postcodeLocation,
       searchResults: response.data.propertySales,
-      isSearching: false
+      isSearching: false,
+      hasResult: true
     })
   };
 
@@ -89,7 +92,8 @@ class App extends React.Component<Props, State> {
   }
 
   showMap = () => {
-    return !this.state.isSearching && this.state.postcodeCoordinates !== null;
+    return !this.state.isSearching && this.state.hasResult;
+    //&& this.state.postcodeCoordinates !== null
   }
 
   resetState = () => {

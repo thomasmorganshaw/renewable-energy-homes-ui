@@ -15,33 +15,31 @@ interface State {
 }
 
 class Feature {
+  code: string
   label: string
-  propertyFeatureId: number
-  propertyId: number
+  // propertyFeatureId: number
+  // propertyId: number
 }
 
 class PropertyFeature extends React.Component<Props, State> {
   state = {}
 
-  getIcon(featureId: number) {
-    switch (featureId) {
-      case 1: return homeIcon
-      case 2: return solarIcon
-      case 3: return windIcon
-      case 4: return evIcon
+  getIcon(code: string) {
+    switch (code) {
+      case "BSU": return homeIcon
+      case "SPRI": return solarIcon
+      case "WTG": return windIcon
+      case "EVCP": return evIcon
       default: return;
     }
   }
-
-
-
 
   render() {
     return (
       <Tooltip title={this.props.feature.label}>
         <img
           style={{ display: 'block', width: '40px', paddingRight: '10px', float: 'left' }}
-          src={this.getIcon(this.props.feature.propertyFeatureId)}
+          src={this.getIcon(this.props.feature.code)}
           alt={this.props.feature.label} />
       </Tooltip>
     );

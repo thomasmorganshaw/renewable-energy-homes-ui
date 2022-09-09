@@ -8,10 +8,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled } from '@mui/material/styles';
 
 const samplePostcodes = [
-  { label: 'CO38WR' },
-  { label: 'S337ZP' },
-  { label: 'SW11AA' },
-  { label: 'LA229JU' }
+  { label: 'SK8 5RX' },
+  { label: 'OL9 8BP' },
+  { label: 'BB0 1GR' },
+  { label: 'CO3 0QF' }
 ];
 
 const CustomButton = styled(Button)({
@@ -51,7 +51,7 @@ class Search extends React.Component<Props, State> {
           Enter full UK postcode
         </Typography>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={6}>
             <Autocomplete
               freeSolo
               id="free-solo-2-demo"
@@ -70,7 +70,7 @@ class Search extends React.Component<Props, State> {
               )}
             />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6}>
             <CustomButton
               onClick={this.handleClick}
               size="large" variant="contained" endIcon={<SearchIcon />} fullWidth>
