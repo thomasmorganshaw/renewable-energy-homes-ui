@@ -1,15 +1,9 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
+import AddressLineProps from './props';
+import AddressLineState from './state';
 
-interface Props {
-    propertyResult: any
-}
-
-interface State {
-
-}
-
-class AddressLine extends React.Component<Props, State> {
+class AddressLine extends React.Component<AddressLineProps, AddressLineState> {
     static getDerivedStateFromProps(props, state) {
         let arr = []
         if (props.propertyResult === null) return state;
@@ -31,7 +25,7 @@ class AddressLine extends React.Component<Props, State> {
 
     render() {
         return (
-            <Typography gutterBottom variant="h6" component="div">
+            <Typography gutterBottom variant="h6" component="div" role="address-line">
                 {this.state.addressLine}
             </Typography>
         );

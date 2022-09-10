@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import CardContent from '@mui/material/CardContent';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
-import AddressLine from '../components/addressLine';
+import AddressLine from './addressLine/addressLine';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import PropertyFeature from '../components/propertyFeature';
