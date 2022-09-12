@@ -3,7 +3,6 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
 import Checkbox from '@mui/material/Checkbox';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
