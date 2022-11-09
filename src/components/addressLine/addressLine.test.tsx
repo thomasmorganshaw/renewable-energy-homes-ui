@@ -17,7 +17,7 @@ test('render full address with all properties', () => {
   var expectedString = 'Blenley Lodge, 1, Some street, Some place, Some where, Someton, Countyshire, AB1 2CD'
 
   render(<AddressLine propertyResult={propertyResultWithPostcode} />);
-  const linkElement = screen.getAllByRole('address-line') //recommended to add roles to components for accessiblity reasons
+  const linkElement = screen.getAllByRole('address-line')
   expect(linkElement[0]).toHaveTextContent(expectedString);
 
 });
@@ -31,7 +31,7 @@ test('render minimal properties only shows postcode', () => {
   var expectedString = 'AB1 2CD'
 
   render(<AddressLine propertyResult={propertyResultWithPostcode} />);
-  const linkElement = screen.getAllByRole('address-line') //recommended to add roles to components for accessiblity reasons
+  const linkElement = screen.getAllByRole('address-line')
   expect(linkElement[0]).toHaveTextContent(expectedString);
 
 });
@@ -48,7 +48,7 @@ test('mixture of properties, only renders what has been provided', () => {
   var expectedString = '1, Some street, Someton, AB1 2CD'
 
   render(<AddressLine propertyResult={propertyResultWithPostcode} />);
-  const linkElement = screen.getAllByRole('address-line') //recommended to add roles to components for accessiblity reasons
+  const linkElement = screen.getAllByRole('address-line')
   expect(linkElement[0]).toHaveTextContent(expectedString);
 
 });
