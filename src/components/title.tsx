@@ -4,7 +4,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 
-const logo = 'https://morganshawwebassets.blob.core.windows.net/assets/free-leaves-icon.png'
+//const logo = 'https://rehstorageprod.blob.core.windows.net/assets/free-leaves-icon.png'
+const logo = 'http://assets.morganshaw.net/assets/free-leaves-icon.png'
 
 interface Props {
 

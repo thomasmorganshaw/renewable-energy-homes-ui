@@ -56,7 +56,7 @@ class PropertyInfo extends React.Component<Props, State> {
                 <Stack spacing={1}>
                   <label>Last Sold</label>
                   <label><strong>{
-                    this.formatDate(this.props.propertyResult.latestPropertySale[0]?.dateOfSale)
+                    this.formatDate(this.props.propertyResult.dateOfSale)
                   }</strong></label>
                 </Stack>
               </Box>
@@ -66,7 +66,7 @@ class PropertyInfo extends React.Component<Props, State> {
                 <Stack spacing={1}>
                   <label>Sale Amount</label>
                   <label><strong>{
-                    this.formatCurrency(this.props.propertyResult.latestPropertySale[0]?.saleAmount)
+                    this.formatCurrency(this.props.propertyResult.saleAmount)
                   }</strong></label>
                 </Stack>
               </Box>
@@ -87,9 +87,9 @@ class PropertyInfo extends React.Component<Props, State> {
               )}
             </Grid>
             <Grid item xs={12} md={6}>
-              <Button variant="outlined" size="large" fullWidth>
+              {/* <Button variant="outlined" size="large" fullWidth>
                 Make Booking
-              </Button>
+              </Button> */}
             </Grid>
           </Grid>
         </CardContent>

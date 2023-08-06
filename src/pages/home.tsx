@@ -39,8 +39,16 @@ class Home extends React.Component<HomeProps, HomeState> {
 
         console.log("search response", response)
 
+        var coordinates = null;
+        if (response.data.propertySales.length > 0) {
+            coordinates = {
+                latitude: response.data.propertySales[0].latitude,
+                longitude: response.data.propertySales[0].longitude
+            }
+        }
+
         this.setState({
-            postcodeCoordinates: response.data.postcodeLocation,
+            postcodeCoordinates: coordinates,
             searchResults: response.data.propertySales,
             isSearching: false,
             hasResult: true

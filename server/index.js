@@ -24,8 +24,8 @@ app.get("/data", (req, res) => {
 });
 
 // Proxy setup
-app.use('/property', createProxyMiddleware({
-    target: process.env.API_SEARCH_URL,
+app.use('/property/', createProxyMiddleware({
+    target: 'http://localhost:5276',//process.env.API_SEARCH_URL,
     changeOrigin: true
 }));
 

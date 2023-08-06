@@ -1,10 +1,15 @@
 import * as React from 'react';
 import Tooltip from '@mui/material/Tooltip';
 
-const homeIcon = 'https://morganshawwebassets.blob.core.windows.net/assets/home-icon.png'
-const solarIcon = 'https://morganshawwebassets.blob.core.windows.net/assets/solar-icon.png'
-const windIcon = 'https://morganshawwebassets.blob.core.windows.net/assets/wind-icon.png'
-const evIcon = 'https://morganshawwebassets.blob.core.windows.net/assets/ev-icon.png'
+// const homeIcon = 'https://rehstorageprod.blob.core.windows.net/assets/home-icon.png'
+// const solarIcon = 'https://rehstorageprod.blob.core.windows.net/assets/solar-icon.png'
+// const windIcon = 'https://rehstorageprod.blob.core.windows.net/assets/wind-icon.png'
+// const evIcon = 'https://rehstorageprod.blob.core.windows.net/assets/ev-icon.png'
+
+const homeIcon = 'http://assets.morganshaw.net/assets/home-icon.png'
+const solarIcon = 'http://assets.morganshaw.net/assets/solar-icon.png'
+const windIcon = 'http://assets.morganshaw.net/assets/wind-icon.png'
+const evIcon = 'http://assets.morganshaw.net/assets/ev-icon.png'
 
 interface Props {
   feature: Feature

@@ -5,7 +5,8 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
-const featureBanner = 'https://morganshawwebassets.blob.core.windows.net/assets/shutterstock-solar-home.jpg'
+// const featureBanner = 'https://rehstorageprod.blob.core.windows.net/assets/shutterstock-solar-home.jpg'
+const featureBanner = 'http://assets.morganshaw.net/assets/shutterstock-solar-home.jpg'
 
 interface Props {
 }

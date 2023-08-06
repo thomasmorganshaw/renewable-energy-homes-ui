@@ -13,12 +13,12 @@ interface State {
 class Map extends React.Component<Props, State> {
     state = {
         zoom: 12,
-        lat: this.props.coordinates?.Latitude,
-        lng: this.props.coordinates?.Longitude
+        lat: this.props.coordinates?.latitude,
+        lng: this.props.coordinates?.longitude
     }
 
     showGoogleMap = () => {
-        return this.props.coordinates?.Latitude && this.props.coordinates?.Longitude;
+        return this.props.coordinates?.latitude && this.props.coordinates?.longitude;
     }
 
     render() {

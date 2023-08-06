@@ -8,10 +8,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled } from '@mui/material/styles';
 
 const samplePostcodes = [
-  { label: 'SK8 5RX' },
-  { label: 'OL9 8BP' },
-  { label: 'BB0 1GR' },
-  { label: 'CO3 0QF' }
+  { label: 'SK85RX' },
+  { label: 'OL98BP' },
+  { label: 'BB01GR' },
+  { label: 'CO30QF' }
 ];
 
 const CustomButton = styled(Button)({
