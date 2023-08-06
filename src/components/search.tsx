@@ -11,7 +11,8 @@ const samplePostcodes = [
   { label: 'SK85RX' },
   { label: 'OL98BP' },
   { label: 'BB01GR' },
-  { label: 'CO30QF' }
+  { label: 'CO38WR' },
+  { label: 'SK86EN' }
 ];
 
 const CustomButton = styled(Button)({
